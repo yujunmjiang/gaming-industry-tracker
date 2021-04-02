@@ -4,7 +4,34 @@
   </div>
 </template>
 
+<script>
+import * as d3 from 'd3';
+
+export default {
+  name: 'App',
+  data(){
+    return {
+      softwareDevelopment: null,
+    }
+  },
+  // props: {
+  //   softwareDevelopment: Array,
+  // },
+  mounted(){
+    Promise.all([
+      d3.csv('software_development.csv')
+    ])
+      .then(data => {
+        this.softwareDevelopment = data[0];
+        console.log(data);
+      })
+  }
+}
+</script>
+
 <style>
+@import './assets/styles/main.css';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
