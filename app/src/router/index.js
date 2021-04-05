@@ -1,39 +1,24 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-// import { component } from 'vue/types/umd'
-import GetHomepage from '../views/GetHomepage.vue'
-import GetProduction from '../views/GetProduction.vue'
-import GetTopGames from '../views/GetTopGames.vue'
-// import GetTopStreamers from '../views/GetTopStreamers.vue'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'GetHomepage',
-    component: GetHomepage
+    name: 'Home',
+    component: Home
   },
   {
-    path: '/GetProduction',
-    name: 'GetProduction',
-    component: GetProduction
-  },
-  {
-    path: '/GetTopGames',
-    name: 'GetTopGames',
-    component: GetTopGames
-  },
-  // {
-  //   path: '/GetTopStreamers',
-  //   name: 'GetTopStreamers',
-  //   component: GetTopStreamers
-  // }
+    path: '/about',
+    name: 'About',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
