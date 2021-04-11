@@ -10,6 +10,8 @@
 ## Abstract
 The video game industry has undergone a series of changes as a result of the Covid-19 pandemic. Stress on the supply chains of hardware and software have forced companies to adjust to new working environments within short periods of time. At the same time, people have turned more and more towards games as a form of leisure, entertainment, and human connection. We analyze several economic and human studies data sets collected during the past 2 years in order to visualize the supply, demand, and popularity of games during the pandemic. Our results suggest that despite turbulence in the supply chain, game companies have managed to adequately shift their business models to allow for tremendous growth as other industries have struggled.
 
+The visualizations present how production process challenges, total consumer spending, user behavior and gaming community network were impacted by the Covid-19 pandemic. In these difficult times, the video game industry has demonstrated with data that it is unshakable in people's minds and will go farther in the future.
+
 ## Screen Captures
 
 ## Acknowledgements
