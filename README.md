@@ -1,4 +1,5 @@
 # A Different Game
+[VIEW PROJECT]
 ## How COVID-19 has changed the video game industry
 
 ### Table of Contents
