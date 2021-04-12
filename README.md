@@ -1,5 +1,5 @@
 # A Different Game
-[VIEW PROJECT]()
+[VIEW PROJECT](https://parsons.nyc/thesis-2021/)
 ## How COVID-19 has changed the video game industry
 
 ### Table of Contents
