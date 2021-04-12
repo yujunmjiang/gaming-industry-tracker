@@ -13,7 +13,6 @@ The video game industry has undergone a series of changes as a result of the Cov
 In this project, the visualizations present how regular production process, total consumer spending, user behavior and gaming community network were impacted by the Covid-19 pandemic. As we expected, the video game industry has demonstrated with data that it is unshakable in people's minds and will go farther in the future.
 
 ## Screen Captures
-<img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/screen-captures/Slide%2016_9%20-%202.png">
 <img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/screen-captures/Slide%2016_9%20-%201.png">
 
 ## Acknowledgements
