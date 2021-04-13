@@ -1,7 +1,7 @@
 <template>
 <div class="getrevenue">
   <div id="RevenueContainer">
-    <h1>Video Game Industy Revenue</h1>
+    <h1>Video Game Industry Revenue</h1>
     <div id="revenue1">
 
     </div>
