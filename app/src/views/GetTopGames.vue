@@ -1,6 +1,6 @@
 <template>
+<div class="gettopgames">
   <div id="GetTopGamesContainer">
-    <topNavBarLinks></topNavBarLinks>
     <h1>List of Top Games</h1>
     <div id="topGames">
       <div class="topGames" v-for='topGame in listOfTopGames'
@@ -14,12 +14,13 @@
           </div>
         </a>
       </div>
+    </div>
   </div>
-  </div>
+</div>
 </template>
 
 <script>
-import topNavBarLinks from '../components/topNavBarLinks';
+
 
 export default {
   name: 'GetTopGames',
@@ -29,7 +30,7 @@ export default {
     }
   },
   components: {
-    topNavBarLinks,
+    
   },
   methods: {
     fetchTopGames: function () {

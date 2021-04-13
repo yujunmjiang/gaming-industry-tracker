@@ -1,40 +1,27 @@
 <template>
   <div id="ProductionContainer">
-    <topNavBarLinks></topNavBarLinks>
     <h1>Production Process Challenges Summary</h1>
-    <div class="devData" :softwareDevelopment="softwareDevelopment"></div>
-    <!-- <div id="topGames">
-      <div class="topGames" v-for='topGame in listOfTopGames'
-      :key='topGame.gameID'>
-        <a href="">
-          <div class="topGameThumbnailContainer">
-            <img class="topGameThumbnail" :src="`${topGame.gameBoxArtURL}`" alt="">
-          </div>
-          <div class="topGameDescription">
-            {{ topGame.gameName }}
-          </div>
-        </a>
-      </div>
-    </div> -->
+    <div class="dataViz" id="softDevChart" :softwareDevelopment="softwareDevelopment">
+      <BarChart title="How is COVID-19 affecting game development practices?" xKey="category" yKey="percentage" :data="softwareDevelopment"/>
+    </div>
+
   </div>
 </template>
 
 <script>
-import topNavBarLinks from '../components/topNavBarLinks';
+// import topNavBarLinks from '../components/topNavBarLinks';
 import * as d3 from 'd3';
+import BarChart from '@/components/BarChart.vue';
 
 export default {
   name: 'GetProduction',
   data(){
     return {
-      softwareDevelopment: null,
+      softwareDevelopment: [],
     }
   },
-  props: {
-    // softwareDevelopment: Array,
-  },
   components: {
-    topNavBarLinks,
+    BarChart
   },
   mounted(){
     Promise.all([
@@ -52,5 +39,13 @@ export default {
 </script>
 
 <style>
-
+#softDevChart {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #282f36;
+  margin-top: 30px;
+}
 </style>
