@@ -18,10 +18,7 @@
 </template>
 
 <script>
-import { scaleLinear, scaleBand } from 'd3-scale';
-import { max, min } from 'd3-array';
-import { selectAll } from 'd3-selection';
-// import { transition } from 'd3-transition';
+import * as d3 from 'd3';
 
 export default {
   name: "BarChart",
@@ -31,7 +28,7 @@ export default {
     yKey: String,
     data: Array
   },
-  mounted() {
+  mounted(){
     this.svgWidth = document.getElementById("container").offsetWidth * 0.75;
     this.AddResizeListener();
     this.AnimateLoad();
@@ -42,8 +39,9 @@ export default {
   }),
   methods: {
     AnimateLoad() {
-      selectAll("rect")
+      d3.selectAll("rect")
         .data(this.data)
+        .style("fill", "#5758bb")
         .transition()
         .delay((d, i) => {
           return i * 150;
@@ -71,17 +69,17 @@ export default {
   },
   computed: {
     dataMax() {
-      return max(this.data, d => {
+      return d3.max(this.data, d => {
         return d[this.yKey];
       });
     },
     dataMin() {
-      return min(this.data, d => {
+      return d3.min(this.data, d => {
         return d[this.yKey];
       });
     },
     xScale() {
-      return scaleBand()
+      return d3.scaleBand()
         .rangeRound([0, this.svgWidth])
         .padding(0.1)
         .domain(
@@ -91,7 +89,7 @@ export default {
         );
     },
     yScale() {
-      return scaleLinear()
+      return d3.scaleLinear()
         .rangeRound([this.svgHeight, 0])
         .domain([this.dataMin > 0 ? 0 : this.dataMin, this.dataMax]);
     },
@@ -104,7 +102,6 @@ export default {
 
 <style scoped>
 .bar-positive {
-  fill: steelblue;
   transition: r 0.2s ease-in-out;
 }
 

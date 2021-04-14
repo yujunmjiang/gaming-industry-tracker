@@ -14,22 +14,20 @@ import BarChart from '@/components/BarChart.vue';
 
 export default {
   name: 'GetProduction',
-  data(){
-    return {
-      softwareDevelopment: [],
-    }
-  },
   components: {
     BarChart
   },
-  mounted(){
-    Promise.all([
-      d3.csv('software_development.csv')
-    ])
+  created(){
+    d3.json('software_development.json')   
       .then(data => {
-        this.softwareDevelopment = data[0];
+        this.softwareDevelopment = data;
         console.log(data);
       })
+  },
+  data(){
+    return {
+      softwareDevelopment: []
+    }
   },
   methods: {
 
@@ -44,7 +42,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: white;
+  color: black;
   margin-top: 30px;
 }
 </style>
