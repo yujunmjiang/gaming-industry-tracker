@@ -8,6 +8,7 @@
 
 <script>
 import { select, axisBottom } from 'd3'
+
 export default {
   name: 'XAxis',
   props: {
@@ -18,6 +19,9 @@ export default {
   updated() {
     select(`.x-axis-${this.id}`)
       .call(axisBottom(this.xScale))
+        .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("transform", "rotate(-65)")
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div id="container" class="svg-container" align="center">
     <h1>{{ title }}</h1>
-    <svg v-if="redrawToggle === true" :width="svgWidth" :height="svgHeight">
+    <svg v-if="redrawToggle === true" :width="svgWidth * 3" :height="svgHeight * 3">
       <g>
         <rect
           v-for="item in data"
@@ -11,12 +11,24 @@
           :width="xScale.bandwidth()"       
         ></rect>
       </g>
+      <XAxis 
+        :xScale="xScale" 
+        :yTranslate="svgHeight"
+        :id="id"
+      />
+      <YAxis 
+        :yScale="yScale"
+        :xTranslate="0"
+        :id="id"
+      />
     </svg>
   </div>
 </template>
 
 <script>
 import * as d3 from 'd3';
+import XAxis from './XAxis.vue';
+import YAxis from './YAxis.vue';
 
 export default {
   name: "BarChart",
@@ -25,6 +37,10 @@ export default {
     xKey: String,
     yKey: String,
     data: Array
+  },
+  components: {
+    XAxis,
+    YAxis
   },
   mounted(){
     window.addEventListener("resize", this.onResize)
@@ -59,6 +75,12 @@ export default {
           return this.svgHeight - this.yScale(d[this.yKey]);
         });
     },
+    // textRotate() {
+    //   svg.apepnd("XAxis")
+    //      .attr("class", "x axis")
+    //      .attr("transform", "translate(0, " + height + ")")
+    //      .call
+    // }
     onResize() {
       // redraw the chart 300ms after the window has been resized
       this.$data.redrawToggle = false;
@@ -102,10 +124,7 @@ export default {
     svgHeight() {
       return this.svgWidth / 1.61803398875; // golden ratio
     }
-  },
-  // var colors = d3.scale.linear()
-  //     .domain(d3.range[0, this.data.length])
-  //     .range(['#9146ff','#ffffff'])
+  }
 };
 </script>
 
