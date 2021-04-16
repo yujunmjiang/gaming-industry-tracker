@@ -1,0 +1,44 @@
+[
+    {
+        "device": "Smart Watches",
+        "previous": 14.4,
+        "revised": 12.1,
+        "change": -16.0
+    },
+    {
+        "device": "Smartphones",
+        "previous": 307,
+        "revised": 275,
+        "change": -10.4
+    },
+    {
+        "device": "Notenooks",
+        "previous": 35.0,
+        "revised": 30.7,
+        "change": -12.3
+    },
+    {
+        "device": "Monitors",
+        "previous": 29.0,
+        "revised": 27.5,
+        "change": -5.2
+    },
+    {
+        "device": "TVs",
+        "previous": 48.8,
+        "revised": 46.6,
+        "change": -4.5
+    },
+    {
+        "device": "Video Game Consoles",
+        "previous": 6.9,
+        "revised": 6.2,
+        "change": -10.1
+    },
+    {
+        "device": "Smart Speakers",
+        "previous": 26.4,
+        "revised": 23.2,
+        "change": -12.1
+    }
+  ]

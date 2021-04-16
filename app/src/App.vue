@@ -13,11 +13,11 @@
 <style>
 #app {
   /* background-color: black; */
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #5758bb;
+  color: #9146ff;
 }
 
 #nav {
@@ -30,6 +30,6 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #5758bb;
+  color: #9146ff;
 }
 </style>

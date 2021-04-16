@@ -8,9 +8,7 @@
           class="bar-positive"
           :key="item[xKey]"
           :x="xScale(item[xKey])"
-          :y="yScale(0)"
-          :width="xScale.bandwidth()"
-          :height="0"
+          :width="xScale.bandwidth()"       
         ></rect>
       </g>
     </svg>
@@ -29,9 +27,14 @@ export default {
     data: Array
   },
   mounted(){
+    window.addEventListener("resize", this.onResize)
+  },
+  updated(){
     this.svgWidth = document.getElementById("container").offsetWidth * 0.75;
-    this.AddResizeListener();
     this.AnimateLoad();
+  },
+  unmounted(){
+    window.removeEventListener("resize", this.onResize)
   },
   data: () => ({
     svgWidth: 0,
@@ -41,7 +44,9 @@ export default {
     AnimateLoad() {
       d3.selectAll("rect")
         .data(this.data)
-        .style("fill", "#5758bb")
+        // .style("fill", "#9146ff")
+        .attr('y', this.yScale(0))
+        .attr('height', 0)
         .transition()
         .delay((d, i) => {
           return i * 150;
@@ -54,17 +59,15 @@ export default {
           return this.svgHeight - this.yScale(d[this.yKey]);
         });
     },
-    AddResizeListener() {
+    onResize() {
       // redraw the chart 300ms after the window has been resized
-      window.addEventListener("resize", () => {
-        this.$data.redrawToggle = false;
+      this.$data.redrawToggle = false;
         setTimeout(() => {
           this.$data.redrawToggle = true;
           this.$data.svgWidth =
             document.getElementById("container").offsetWidth * 0.75;
           this.AnimateLoad();
         }, 300);
-      });
     }
   },
   computed: {
@@ -77,6 +80,9 @@ export default {
       return d3.min(this.data, d => {
         return d[this.yKey];
       });
+    },
+    id() {
+      return `${this.xKey}-${this.yKey}`
     },
     xScale() {
       return d3.scaleBand()
@@ -96,17 +102,21 @@ export default {
     svgHeight() {
       return this.svgWidth / 1.61803398875; // golden ratio
     }
-  }
+  },
+  // var colors = d3.scale.linear()
+  //     .domain(d3.range[0, this.data.length])
+  //     .range(['#9146ff','#ffffff'])
 };
 </script>
 
 <style scoped>
 .bar-positive {
+  fill: #9146ff;
   transition: r 0.2s ease-in-out;
 }
 
 .bar-positive:hover {
-  fill: brown;
+  filter: brightness(125%)
 }
 
 .svg-container {
