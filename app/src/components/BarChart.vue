@@ -1,7 +1,7 @@
 <template>
   <div id="container" class="svg-container" align="center">
     <h1>{{ title }}</h1>
-    <svg v-if="redrawToggle === true" :width="svgWidth * 3" :height="svgHeight * 3">
+    <svg v-if="redrawToggle === true" :width="svgWidth" :height="svgHeight * 2">
       <g>
         <rect
           v-for="item in data"
@@ -43,11 +43,12 @@ export default {
     YAxis
   },
   mounted(){
-    window.addEventListener("resize", this.onResize)
-  },
-  updated(){
+    window.addEventListener("resize", this.onResize);
     this.svgWidth = document.getElementById("container").offsetWidth * 0.75;
+  },
+  updated(){ 
     this.AnimateLoad();
+    this.redrawToggle = true;
   },
   unmounted(){
     window.removeEventListener("resize", this.onResize)
@@ -60,7 +61,6 @@ export default {
     AnimateLoad() {
       d3.selectAll("rect")
         .data(this.data)
-        // .style("fill", "#9146ff")
         .attr('y', this.yScale(0))
         .attr('height', 0)
         .transition()
@@ -74,22 +74,11 @@ export default {
         .attr("height", d => {
           return this.svgHeight - this.yScale(d[this.yKey]);
         });
+        setTimeout(() => 300); // redraw the chart 300ms after the window has been resized
     },
-    // textRotate() {
-    //   svg.apepnd("XAxis")
-    //      .attr("class", "x axis")
-    //      .attr("transform", "translate(0, " + height + ")")
-    //      .call
-    // }
     onResize() {
-      // redraw the chart 300ms after the window has been resized
+      this.$svgWidth = document.getElementById("container").offsetWidth * 0.75;
       this.$data.redrawToggle = false;
-        setTimeout(() => {
-          this.$data.redrawToggle = true;
-          this.$data.svgWidth =
-            document.getElementById("container").offsetWidth * 0.75;
-          this.AnimateLoad();
-        }, 300);
     }
   },
   computed: {
@@ -102,9 +91,6 @@ export default {
       return d3.min(this.data, d => {
         return d[this.yKey];
       });
-    },
-    id() {
-      return `${this.xKey}-${this.yKey}`
     },
     xScale() {
       return d3.scaleBand()
@@ -120,6 +106,9 @@ export default {
       return d3.scaleLinear()
         .rangeRound([this.svgHeight, 0])
         .domain([this.dataMin > 0 ? 0 : this.dataMin, this.dataMax]);
+    },
+    id() {
+      return `${this.xKey}-${this.yKey}`
     },
     svgHeight() {
       return this.svgWidth / 1.61803398875; // golden ratio
