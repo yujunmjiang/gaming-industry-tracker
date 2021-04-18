@@ -1,26 +1,29 @@
 <template>
   <div id="container" class="svg-container" align="center">
     <h1>{{ title }}</h1>
-    <svg v-if="redrawToggle === true" :width="svgWidth" :height="svgHeight * 2">
-      <g>
-        <rect
-          v-for="item in data"
-          class="bar-positive"
-          :key="item[xKey]"
-          :x="xScale(item[xKey])"
-          :width="xScale.bandwidth()"       
-        ></rect>
+    <!-- <svg v-if="redrawToggle === true" :width="svgWidth" :height="svgHeight * 2"> -->
+    <svg :width="svgWidth + margin.left" :height="svgHeight * 2">
+      <g :transform="'translate(' + margin.left + ',' + margin.top + ')'">
+        <g>
+          <rect
+            v-for="item in data"
+            class="bar-positive"
+            :key="item[xKey]"
+            :x="xScale(item[xKey])"
+            :width="xScale.bandwidth()"       
+          ></rect>
+        </g>
+        <XAxis 
+          :xScale="xScale" 
+          :yTranslate="svgHeight"
+          :id="id"
+        />
+        <YAxis 
+          :yScale="yScale"
+          :xTranslate="0"
+          :id="id"
+        />
       </g>
-      <XAxis 
-        :xScale="xScale" 
-        :yTranslate="svgHeight"
-        :id="id"
-      />
-      <YAxis 
-        :yScale="yScale"
-        :xTranslate="0"
-        :id="id"
-      />
     </svg>
   </div>
 </template>
@@ -32,16 +35,21 @@ import YAxis from './YAxis.vue';
 
 export default {
   name: "BarChart",
+  components: {
+    XAxis,
+    YAxis
+  },
   props: {
     title: String,
     xKey: String,
     yKey: String,
     data: Array
   },
-  components: {
-    XAxis,
-    YAxis
-  },
+  data: () => ({
+    margin: {top: 10, left: 30, bottom: 10, right: 10 },
+    svgWidth: 0,
+    redrawToggle: true
+  }),
   mounted(){
     window.addEventListener("resize", this.onResize);
     this.svgWidth = document.getElementById("container").offsetWidth * 0.75;
@@ -53,10 +61,6 @@ export default {
   unmounted(){
     window.removeEventListener("resize", this.onResize)
   },
-  data: () => ({
-    svgWidth: 0,
-    redrawToggle: true
-  }),
   methods: {
     AnimateLoad() {
       d3.selectAll("rect")

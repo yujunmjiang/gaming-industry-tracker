@@ -1,26 +1,26 @@
 [
   {
-      "category": "No change / effect in business",
+      "category": "No change",
       "percentage": 40
   },
   {
-      "category": "We need to outsource some of our game development or maintenance",
+      "category": "Outsource development or maintenance",
       "percentage": 14
   },
   {
-      "category": "We need more workforce",
+      "category": "Need more workforce",
       "percentage": 13
   },
   {
-      "category": "We could do subcontracting to other game developer studios",
+      "category": "Subcontract to other studios",
       "percentage": 13
   },
   {
-      "category": "We are downscaling / shutting down our business",
+      "category": "Downscale / shut down business",
       "percentage": 13
   },
   {
-    "category": "Uncertainty / delay in projects and deals",
+    "category": "Delay in projects and deals",
     "percentage": 7
   }
 ]
