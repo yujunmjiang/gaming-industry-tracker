@@ -20,7 +20,7 @@
       <el-col :xs="24" :sm="10" :md="10" :lg="10" :xl="10">
         <div class="grid-content">
           <div class="dataViz" id="hardManChart" :hardwareManufacturing="hardwareManufacturing">
-            <BarChart title="How is COVID-19 affecting game development practices?" xKey="device" yKey="change" :data="hardwareManufacturing"/>
+            <BarChart id="chart1" title="Estimated impact of the COVID-19 outbreak on global tech shipments in Q1 2020" xKey="device" yKey="change" :data="hardwareManufacturing"/>
           </div>
         </div>
       </el-col>
@@ -46,7 +46,7 @@
       <el-col :xs="24" :sm="10" :md="10" :lg="8" :xl="8">
         <div class="grid-content">
           <div class="dataViz" id="softDevChart" :softwareDevelopment="softwareDevelopment">
-            <BarChart title="How is COVID-19 affecting game development practices?" xKey="category" yKey="percentage" :data="softwareDevelopment"/>
+            <BarChart id="chart2" title="How is COVID-19 affecting game development practices?" xKey="category" yKey="percentage" :data="softwareDevelopment"/>
           </div>
         </div>
       </el-col>

@@ -10,7 +10,8 @@
             class="bar-positive"
             :key="item[xKey]"
             :x="xScale(item[xKey])"
-            :width="xScale.bandwidth()"       
+            :width="xScale.bandwidth()"
+            :id="id"   
           ></rect>
         </g>
         <XAxis 
@@ -40,6 +41,7 @@ export default {
     YAxis
   },
   props: {
+    id: String,
     title: String,
     xKey: String,
     yKey: String,
@@ -111,9 +113,9 @@ export default {
         .rangeRound([this.svgHeight, 0])
         .domain([this.dataMin > 0 ? 0 : this.dataMin, this.dataMax]);
     },
-    id() {
-      return `${this.xKey}-${this.yKey}`
-    },
+    // id() {
+    //   return `${this.xKey}-${this.yKey}`
+    // },
     svgHeight() {
       return this.svgWidth / 1.61803398875; // golden ratio
     }
