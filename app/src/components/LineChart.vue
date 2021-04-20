@@ -5,13 +5,13 @@
     <svg :width="svgWidth + margin.left" :height="svgHeight * 1.5">
       <g :transform="'translate(' + margin.left + ',' + margin.top + ')'">
         <g>
-          <rect
+          <path
             v-for="item in data"
-            class="bar-positive"
+            class="line-positive"
             :key="item[xKey]"
             :x="xScale(item[xKey])"
             :width="xScale.bandwidth()" 
-          ></rect>
+          ></path>
         </g>
         <XAxis 
           :xScale="xScale" 
@@ -34,7 +34,7 @@ import XAxis from './XAxis.vue';
 import YAxis from './YAxis.vue';
 
 export default {
-  name: "BarChart",
+  name: "LineChart",
   components: {
     XAxis,
     YAxis
@@ -68,8 +68,10 @@ export default {
   methods: {
     AnimateLoad() {
       // d3.selectAll('rect')
-      d3.select(this.$container).selectAll('rect')
+      d3.select(this.$container).selectAll('path')
         .data(this.data)
+        .attr('stroke-width', 1.5)
+        // .attr('data', d3.line())
         .attr('y', this.yScale(0))
         .attr('height', 0)
         .transition()
@@ -105,7 +107,7 @@ export default {
     xScale() {
       return d3.scaleBand()
         .rangeRound([0, this.svgWidth])
-        .padding(0.5)
+        // .padding(0.1)
         .domain(
           this.data.map(d => {
             return d[this.xKey];
@@ -128,12 +130,14 @@ export default {
 </script>
 
 <style scoped>
-.bar-positive {
-  fill: #9146ff;
+.line-positive {
+  fill: none;
+  stroke: #9146ff;
+  /* stroke-width: 2px; */
   transition: r 0.2s ease-in-out;
 }
 
-.bar-positive:hover {
+.line-positive:hover {
   filter: brightness(125%)
 }
 

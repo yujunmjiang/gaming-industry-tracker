@@ -5,7 +5,7 @@
       <el-col :xs="20" :sm="16" :md="12" :lg="12" :xl="6">
         <div class="dataDes">
           <h1>Hardware Manufacturing</h1>
-          <p>Chinese market research company <a href="https://www.trendforce.com/presscenter/news/20200217-10223.html">TrendForce</a> expects global smartphone production in the first quarter to be 10 percent lower than originally expected due to the <span class="covid19">COVID-19</span> epidemic. The negative effects on output won’t be limited to the smartphone industry, however, as the following chart shows. Smartwatches, notebooks, smart speakers and video game consoles are all expected to suffer double-digit hits on unit shipments this quarter, with TV shipments expected to be 4.5 percent lower than forecast before the outbreak.</p>
+          <p>Chinese market research company <a href="https://www.trendforce.com/presscenter/news/20200217-10223.html">TrendForce</a> expects global smartphone production in the first quarter to be 10 percent lower than originally expected due to the <span class="covid19">COVID-19</span> pandemic. The negative effects on output won’t be limited to the smartphone industry, however, as the following chart shows. Smartwatches, notebooks, smart speakers and video game consoles are all expected to suffer double-digit hits on unit shipments this quarter, with TV shipments expected to be 4.5 percent lower than forecast before the outbreak.</p>
         </div>
       </el-col>
     </el-row>
@@ -19,8 +19,8 @@
       </el-col>     
       <el-col :xs="24" :sm="10" :md="10" :lg="10" :xl="10">
         <div class="grid-content">
-          <div class="dataViz" id="hardManChart" :hardwareManufacturing="hardwareManufacturing">
-            <BarChart id="chart1" title="Estimated impact of the COVID-19 outbreak on global tech shipments in Q1 2020" xKey="device" yKey="change" :data="hardwareManufacturing"/>
+          <div class="dataViz" id="hardManChart">
+            <BarChart id="chart1" title="Estimated impact of the COVID-19 outbreak on global tech shipments in Q1 2020" xKey="device" yKey="revised" :data="hardwareManufacturing"/>
           </div>
         </div>
       </el-col>
@@ -45,7 +45,7 @@
       </el-col>     
       <el-col :xs="24" :sm="10" :md="10" :lg="8" :xl="8">
         <div class="grid-content">
-          <div class="dataViz" id="softDevChart" :softwareDevelopment="softwareDevelopment">
+          <div class="dataViz" id="softDevChart">
             <BarChart id="chart2" title="How is COVID-19 affecting game development practices?" xKey="category" yKey="percentage" :data="softwareDevelopment"/>
           </div>
         </div>

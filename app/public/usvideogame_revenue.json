@@ -1,0 +1,178 @@
+[
+  {
+    "date": "Mar '19",
+    "total": 1.19,
+    "hardware": 0.28,
+    "software": 0.55,
+    "accessories": 0.35,
+    "game_content": "-"
+  },
+  {
+    "date": "Apr '19",
+    "total": 0.85,
+    "hardware": 0.16,
+    "software": 0.43,
+    "accessories": 0.26,
+    "game_content": "-"
+  },
+  {
+    "date": "May '19",
+    "total": 0.64,
+    "hardware": 0.15,
+    "software": 0.26,
+    "accessories": 0.23,
+    "game_content": "-"
+  },
+  {
+    "date": "Jun '19",
+    "total": 0.93,
+    "hardware": 0.23,
+    "software": 0.38,
+    "accessories": 0.32,
+    "game_content": "-"
+  },
+  {
+    "date": "Jul '19",
+    "total": 2.72,
+    "hardware": 0.17,
+    "software": 2.43,
+    "accessories": 0.13,
+    "game_content": "-"
+  },
+  {
+    "date": "Aug '19",
+    "total": 2.43,
+    "hardware": 0.17,
+    "software": 2.15,
+    "accessories": 0.12,
+    "game_content": "-"
+  },
+  {
+    "date": "Sept '19",
+    "total": 3.93,
+    "hardware": 0.24,
+    "software": 0.73,
+    "accessories": 0.15,
+    "game_content": "-"
+  },
+  {
+    "date": "Oct '19",
+    "total": 1.03,
+    "hardware": 0.18,
+    "software": 0.62,
+    "accessories": 0.23,
+    "game_content": "-"
+  },
+  {
+    "date": "Nov '19",
+    "total": 2.25,
+    "hardware": 0.89,
+    "software": 0.93,
+    "accessories": 0.4,
+    "game_content": "-"
+  },
+  {
+    "date": "Dec '19",
+    "total": 2.98,
+    "hardware": 0.97,
+    "software": 1.14,
+    "accessories": 0.87,
+    "game_content": "-"
+  },
+  {
+    "date": "Jan '20",
+    "total": 0.68,
+    "hardware": 0.13,
+    "software": 0.31,
+    "accessories": 0.24,
+    "game_content": "-"
+  },
+  {
+    "date": "Feb '20",
+    "total": 0.76,
+    "hardware": 0.18,
+    "software": 0.31,
+    "accessories": 0.27,
+    "game_content": "-"
+  },
+  {
+    "date": "Mar '20",
+    "total": 1.6,
+    "hardware": 0.46,
+    "software": 0.74,
+    "accessories": 0.4,
+    "game_content": "-"
+  },
+  {
+    "date": "Apr '20",
+    "total": 1.47,
+    "hardware": 0.42,
+    "software": 0.66,
+    "accessories": 0.38,
+    "game_content": "-"
+  },
+  {
+    "date": "May '20",
+    "total": 0.98,
+    "hardware": 0.24,
+    "software": 0.44,
+    "accessories": 0.3,
+    "game_content": "-"
+  },
+  {
+    "date": "Jun '20",
+    "total": 1.18,
+    "hardware": 0.19,
+    "software": 0.57,
+    "accessories": 0.42,
+    "game_content": "-"
+  },
+  {
+    "date": "Jul '20",
+    "total": 3.59,
+    "hardware": 0.17,
+    "software": "-",
+    "accessories": 0.17,
+    "game_content": 3.25
+  },
+  {
+    "date": "Aug '20",
+    "total": 3.33,
+    "hardware": 0.23,
+    "software": "-",
+    "accessories": 0.17,
+    "game_content": 2.94
+  },
+  {
+    "date": "Sept '20",
+    "total": 4.31,
+    "hardware": 0.28,
+    "software": "-",
+    "accessories": 0.19,
+    "game_content": 3.94
+  },
+  {
+    "date": "Oct '20",
+    "total": 3.84,
+    "hardware": 0.26,
+    "software": "-",
+    "accessories": 0.15,
+    "game_content": 3.43
+  },
+  {
+    "date": "Nov '20",
+    "total": 6.97,
+    "hardware": 1.42,
+    "software": "-",
+    "accessories": 0.31,
+    "game_content": 5.24
+  },
+  {
+    "date": "Dec '20",
+    "total": 7.7,
+    "hardware": 1.35,
+    "software": "-",
+    "accessories": 0.55,
+    "game_content": 5.81
+  }
+]
