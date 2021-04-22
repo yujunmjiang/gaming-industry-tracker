@@ -1,6 +1,6 @@
 [
   {
-    "genre": "Action-adventure",
+    "genre": "Action",
     "total": 3,
     "pc": 2,
     "console": -10
@@ -42,7 +42,7 @@
     "console": -10
   },
   {
-    "genre": "Simulation/Creation",
+    "genre": "Simulation",
     "total": 50,
     "pc": 4,
     "console": 22
@@ -54,7 +54,7 @@
     "console": -24
   },
   {
-    "genre": "Strategy/Puzzle",
+    "genre": "Strategy",
     "total": -57,
     "pc": -29,
     "console": 17

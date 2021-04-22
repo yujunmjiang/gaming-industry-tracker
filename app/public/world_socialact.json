@@ -1,0 +1,26 @@
+[
+  {
+    "country": "United States",
+    "type1": 33,
+    "type2": 54,
+    "type3": 38
+  },
+  {
+    "country": "United Kingdom",
+    "type1": 30,
+    "type2": 49,
+    "type3": 32
+  },
+  {
+    "country": "South Korea",
+    "type1": 41,
+    "type2": 44,
+    "type3": 33
+  },
+  {
+    "country": "Germany",
+    "type1": 24,
+    "type2": 45,
+    "type3": 19
+  }
+]
