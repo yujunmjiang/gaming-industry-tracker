@@ -1,6 +1,7 @@
 <template>
+<div class="gethomepage">
     <div id="HomepageContainer">
-        <topNavBarLinks></topNavBarLinks>
+        <!-- <topNavBarLinks></topNavBarLinks> -->
         <h1>Homepage</h1>
         <!-- <div id="topGames">
             <div class="topGames" v-for='topGame in listOfTopGames'
@@ -16,10 +17,11 @@
             </div>
         </div> -->
     </div>
+</div>
 </template>
 
 <script>
-import topNavBarLinks from '../components/topNavBarLinks';
+// import topNavBarLinks from '../components/topNavBarLinks';
 
 export default {
     name: 'GetHomepage',
@@ -27,7 +29,7 @@ export default {
 
     // },
     components: {
-        topNavBarLinks,
+        // topNavBarLinks,
     },
     methods: {
 

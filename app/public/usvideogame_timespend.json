@@ -1,0 +1,62 @@
+[
+  {
+    "genre": "Action-adventure",
+    "total": 3,
+    "pc": 2,
+    "console": -10
+  },
+  {
+    "genre": "Battle Royale",
+    "total": 143,
+    "pc": 19,
+    "console": 7
+  },
+  {
+    "genre": "Fighting",
+    "total": 100,
+    "pc": 24,
+    "console": 6
+  },
+  {
+    "genre": "MOBA",
+    "total": 120,
+    "pc": 14,
+    "console": 26
+  },
+  {
+    "genre": "Rhythm",
+    "total": -27,
+    "pc": 10,
+    "console": 57
+  },
+  {
+    "genre": "RPG",
+    "total": -15,
+    "pc": -11,
+    "console": -11
+  },
+  {
+    "genre": "Shooter",
+    "total": 8,
+    "pc": 3,
+    "console": -10
+  },
+  {
+    "genre": "Simulation/Creation",
+    "total": 50,
+    "pc": 4,
+    "console": 22
+  },
+  {
+    "genre": "Sports",
+    "total": 6,
+    "pc": -16,
+    "console": -24
+  },
+  {
+    "genre": "Strategy/Puzzle",
+    "total": -57,
+    "pc": -29,
+    "console": 17
+  }
+]

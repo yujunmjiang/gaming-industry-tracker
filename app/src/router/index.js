@@ -1,39 +1,40 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-// import { component } from 'vue/types/umd'
-import GetHomepage from '../views/GetHomepage.vue'
-import GetProduction from '../views/GetProduction.vue'
-import GetTopGames from '../views/GetTopGames.vue'
-// import GetTopStreamers from '../views/GetTopStreamers.vue'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../views/Home.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'GetHomepage',
-    component: GetHomepage
+    name: 'Home',
+    component: Home
   },
   {
-    path: '/GetProduction',
+    path: '/getproduction',
     name: 'GetProduction',
-    component: GetProduction
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "getproduction" */ '../views/GetProduction.vue')
   },
   {
-    path: '/GetTopGames',
-    name: 'GetTopGames',
-    component: GetTopGames
+    path: '/getrevenue',
+    name: 'GetRevenue',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "getrevenue" */ '../views/GetRevenue.vue')
   },
-  // {
-  //   path: '/GetTopStreamers',
-  //   name: 'GetTopStreamers',
-  //   component: GetTopStreamers
-  // }
+  {
+    path: '/getcommunity',
+    name: 'GetCommunity',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "getcommunity" */ '../views/GetCommunity.vue')
+  }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(),
   routes
 })
 

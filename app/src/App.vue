@@ -1,43 +1,23 @@
 <template>
-  <div id="app">
+  <div>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/getproduction">Production</router-link> |
+      <router-link to="/getrevenue">Revenue</router-link> |
+      <router-link to="/getcommunity">Community</router-link> 
+    </div>
     <router-view/>
   </div>
 </template>
 
-<script>
-import * as d3 from 'd3';
-
-export default {
-  name: 'App',
-  data(){
-    return {
-      softwareDevelopment: null,
-    }
-  },
-  // props: {
-  //   softwareDevelopment: Array,
-  // },
-  mounted(){
-    Promise.all([
-      d3.csv('software_development.csv')
-    ])
-      .then(data => {
-        this.softwareDevelopment = data[0];
-        console.log(data);
-      })
-  }
-}
-</script>
-
 <style>
-@import './assets/styles/main.css';
-
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* background-color: black; */
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #9146ff;
 }
 
 #nav {
@@ -50,6 +30,6 @@ export default {
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #9146ff;
 }
 </style>
