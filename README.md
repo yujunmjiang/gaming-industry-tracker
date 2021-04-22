@@ -16,7 +16,7 @@ In this project, the visualizations present how regular production process, tota
 
 
 ## Mockup
-<img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/screen-captures/mockups-02.png">
+<img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/mockups/mockups-1.png">
 
 ## Acknowledgements
 This project was completed as part of the 2020 Masters in Data Visualization program at Parsons School of Design, NYC. You can view all of the incredible thesis projects [HERE](https://parsons.nyc/thesis/).
