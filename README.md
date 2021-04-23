@@ -6,7 +6,7 @@
 - [Abstract](#abstract)
 - [Wireframes](#wireframes)
 - [Mockups](#mockups)
-- [Screen Captures](#screen-captures)
+- [Preview](#preview)
 - [Acknowledgements](#acknowledgements)
 
 ## Abstract
@@ -18,10 +18,10 @@ In this project, the visualizations present how regular production process, tota
 <img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/wireframes/wireframes.png">
 
 ## Mockups
-<img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/mockups/mockups-1.png">
+<img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/mockups/mockups.png">
 
-## Screen Captures
-<img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/screen-captures/screen-captures-1.png">
+## Preview
+<img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/preview/preview.png">
 
 ## Acknowledgements
 This project was completed as part of the 2020 Masters in Data Visualization program at Parsons School of Design, NYC. You can view all of the incredible thesis projects [HERE](https://parsons.nyc/thesis/).
