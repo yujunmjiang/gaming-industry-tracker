@@ -4,6 +4,8 @@
 
 ### Table of Contents
 - [Abstract](#abstract)
+- [Wireframes](#wireframes)
+- [Mockups](#mockups)
 - [Screen Captures](#screen-captures)
 - [Acknowledgements](#acknowledgements)
 
