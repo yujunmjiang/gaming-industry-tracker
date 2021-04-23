@@ -7,7 +7,7 @@
     ></path>
     <g v-for="t in ticks" 
       :key="t"
-      :transform="`translate(${x(t)},0)`"
+      :transform="`translate(${translate(t)},0)`"
     >
       <line
         y2="10"
@@ -44,8 +44,17 @@
     computed: {
       ticks() {
         return this.tickValues.length
-          ? this.tickValues
-          : this.x.ticks((this.x.range()[1] - this.x.range()[2]) / 80)
+          ? this.tickValues // Custom defined tick values
+          : this.x.ticks 
+          ? this.x.ticks((this.x.range()[1] - this.x.range()[2]) / 80) // Continouous scale
+          : this.x.domain() // Ordinal scale
+      },
+      translate() {
+        return this.x.ticks
+          ? t => this.x(t) // Continuous scale
+          : this.x.paddingInner
+          ? t => this.x(t) + this.x.bandwidth() / 2 // Band scale
+          : t => this.x(t) + this.x.step() / 2 // Point scale
       }
     },
   }

@@ -72,7 +72,7 @@ export default {
   }
   .dataViz {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.5em;
+    font-size: 12px;
     color: black;
     text-align: center;
     /* margin: 5em 0em; */

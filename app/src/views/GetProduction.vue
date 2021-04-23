@@ -22,7 +22,7 @@
           <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
             <div class="grid-content">
               <div class="dataViz" id="hardManChart">
-                <BarChart id="chart1" title="Estimated impact of the COVID-19 outbreak on global tech shipments in Q1 2020" xKey="device" yKey="revised" :data="hardwareManufacturing"/>
+                <HardManChart/>
               </div>
             </div>
           </el-col>
@@ -48,7 +48,7 @@
           <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
             <div class="grid-content">
               <div class="dataViz" id="softDevChart">
-                <BarChart id="chart2" title="How is COVID-19 affecting game development practices?" xKey="category" yKey="percentage" :data="softwareDevelopment"/>
+                <SoftDevChart/>
               </div>
             </div>
           </el-col>
@@ -59,33 +59,14 @@
 </template>
 
 <script>
-import * as d3 from 'd3';
-import BarChart from '@/components/BarChart.vue';
+import HardManChart from "@/components/HardManChart.vue";
+import SoftDevChart from "@/components/SoftDevChart.vue";
 
 export default {
   name: 'GetProduction',
   components: {
-    BarChart
-  },
-  created(){
-    Promise.all([
-      d3.json('hardware_manufacturing.json'),
-      d3.json('software_development.json')
-    ])
-      .then(data => {
-        this.hardwareManufacturing = data[0];
-        this.softwareDevelopment = data[1];
-        console.log(data);
-      })
-  },
-  data(){
-    return {
-      hardwareManufacturing: [],
-      softwareDevelopment: []
-    }
-  },
-  methods: {
-
+    HardManChart,
+    SoftDevChart
   }
 }
 </script>
@@ -128,7 +109,7 @@ export default {
   }
   .dataViz {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.5em;
+    font-size: 12px;
     color: black;
     text-align: center;
     /* margin: 5em 0em; */

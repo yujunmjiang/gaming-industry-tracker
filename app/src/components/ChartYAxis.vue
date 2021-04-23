@@ -7,14 +7,14 @@
     ></line>
     <g v-for="t in ticks" 
       :key="t"
-      :transform="`translate(0,${y(t)})`"
+      :transform="`translate(0,${translate(t)})`"
     >
       <line
         x2="-10"
         stroke="currentColor"
       ></line>
       <text
-        transform="translate(-15,0)"
+        :transform="`translate(-${tickPadding},0)`"
         dy="0.32em"
         text-anchor="end"
         fill="currentColor"
@@ -39,13 +39,26 @@
       tickFormat: {
         type: Function,
         default: d => d
+      },
+      tickPadding: {
+        type: Number,
+        default: 15
       }
     },
     computed: {
       ticks() {
         return this.tickValues.length
-          ? this.tickValues
-          : this.y.ticks((Math.abs(this.y.range()[0] - this.y.range()[1])) / 40)
+          ? this.tickValues // Custom defined tick values
+          : this.y.ticks 
+          ? this.y.ticks((Math.abs(this.y.range()[0] - this.y.range()[1])) / 40) // Continouous scale
+          : this.y.domain() // Ordinal scale
+      },
+      translate() {
+        return this.y.ticks
+          ? t => this.y(t) // Continuous scale
+          : this.y.paddingInner
+          ? t => this.y(t) + this.y.bandwidth() / 2 // Band scale
+          : t => this.y(t) + this.y.step() / 2 // Point scale
       }
     },
   }

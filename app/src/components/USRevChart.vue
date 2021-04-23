@@ -54,7 +54,7 @@
         :show="tooltipShow"
       >
         <div v-if="tooltipI !== null">
-          <div class="tooltip-item tooltip-date">{{ dates[tooltipI] }}</div>
+          <div class="tooltip-item tooltip-title">{{ dates[tooltipI] }}</div>
           <div v-for="s in series" :key="s.name" class="tooltip-item">
             <div :class="s.name" class="tooltip-name">{{ s.name }}</div>
             <div>{{ formatValue(s.values[tooltipI]) }}</div>
@@ -185,14 +185,5 @@ export default {
 }
 .accessories {
   color: #cfc468;
-}
-.tooltip-item + .tooltip-item {
-  margin-top: 1em;
-}
-.tooltip-date {
-  color: #A5A5A5;
-}
-.tooltip-name {
-  text-transform: capitalize;
 }
 </style>

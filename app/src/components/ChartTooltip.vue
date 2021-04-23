@@ -63,7 +63,7 @@ export default {
   font-size: 12px;
   line-height: 1.2;
   padding: 0.75rem 1rem;
-  max-width: 100%;
+  max-width: 300px;
   background: #FBFBFB;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -73,5 +73,17 @@ export default {
 
 .chart-tooltip.show {
   opacity: 1;
+}
+</style>
+
+<style>
+.chart-tooltip .tooltip-item + .tooltip-item {
+  margin-top: 1em;
+}
+.chart-tooltip .tooltip-title {
+  color: #A5A5A5;
+}
+.chart-tooltip .tooltip-name {
+  text-transform: capitalize;
 }
 </style>
