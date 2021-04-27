@@ -10,6 +10,7 @@
         :y="y"
         :tickPadding="20"
         :transform="`translate(${margin.left},0)`"
+        :wrap-width="margin.left - 20"
       />
       <g>
         <rect

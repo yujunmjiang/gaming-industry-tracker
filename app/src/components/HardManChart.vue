@@ -155,6 +155,9 @@ export default {
 </script>
 
 <style scoped>
+.chart-body {
+  position: relative;
+}
 .previous {
   color: #9146FF;
 }

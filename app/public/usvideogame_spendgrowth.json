@@ -1,0 +1,38 @@
+[
+  {
+    "date": "Mar '20",
+    "games": 35,
+    "hardware": 63,
+    "accessories": 12
+  },
+  {
+    "date": "Apr '20",
+    "games": 73,
+    "hardware": 163,
+    "accessories": 49
+  },
+  {
+    "date": "May '20",
+    "games": 52,
+    "hardware": 56,
+    "accessories": 32
+  },
+  {
+    "date": "Jun '20",
+    "games": 26,
+    "hardware": -17,
+    "accessories": 29
+  },
+  {
+    "date": "Jul '20",
+    "games": 32,
+    "hardware": -2,
+    "accessories": 34
+  },
+  {
+    "date": "Aug '20",
+    "games": 37,
+    "hardware": 37,
+    "accessories": 42
+  }
+]

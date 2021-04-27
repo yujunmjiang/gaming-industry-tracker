@@ -1,6 +1,7 @@
 <template>
-  <g class="axis">
+  <g class="axis axis--x">
     <path
+      class="domain"
       :d="`M${x.range()[0]},10V0H${x.range()[1]}V10`"
       fill="none"
       stroke="currentColor"
@@ -8,6 +9,7 @@
     <g v-for="t in ticks" 
       :key="t"
       :transform="`translate(${translate(t)},0)`"
+      class="tick"
     >
       <line
         y2="10"

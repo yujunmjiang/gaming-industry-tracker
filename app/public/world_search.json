@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Among Us",
+    "search_time": 68,
+    "type": "Multiplayer"
+  },
+  {
+    "name": "Valorant",
+    "search_time": 24.9,
+    "type": "Multiplayer"
+  },
+  {
+    "name": "Genshin Impat",
+    "search_time": 24.9,
+    "type": "Multiplayer"
+  },
+  {
+    "name": "The Last of Us 2",
+    "search_time": 16.6,
+    "type": "Single-player"
+  },
+  {
+    "name": "Call of Duty Warzone",
+    "search_time": 11.1,
+    "type": "Multiplayer"
+  },
+  {
+    "name": "Ghost of Tsushima",
+    "search_time": 11.1,
+    "type": "Multiplayer"
+  },
+  {
+    "name": "FIFA 21",
+    "search_time": 11.1,
+    "type": "Multiplayer"
+  },
+  {
+    "name": "Animal Crossing New Horizons",
+    "search_time": 9.14,
+    "type": "Multiplayer"
+  },
+  {
+    "name": "Cyberpunk 2077",
+    "search_time": 7.48,
+    "type": "Single-player"
+  },
+  {
+    "name": "Minecraft Dungeons",
+    "search_time": 5,
+    "type": "Multiplayer"
+  }
+]

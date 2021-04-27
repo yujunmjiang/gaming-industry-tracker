@@ -23,8 +23,39 @@
 
         <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
           <div class="grid-content">
-            <div class="dataViz" id="usRevChart">
+            <div class="dataViz">
               <USRevChart/>
+            </div>
+          </div>
+        </el-col>
+
+        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+          <div class="grid-content">
+            <div class="dataViz">
+              <USConsumerSpendChart />
+            </div>
+          </div>
+        </el-col>
+        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+          <div class="grid-content">
+            <div class="dataDes">
+              <p>The statistic contains data on how much money U.S. consumers spent on video and computer game hardware, software and accessories in the second quarters of 2019 and 2020. In the second quarter of 2020, consumers in the United States spent an estimated 1.02 billion U.S. dollars on video gaming content and a record 11.6 billion U.S. dollars on video gaming as a whole.</p>
+            </div>
+          </div>
+        </el-col>
+
+        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+          <div class="grid-content">
+            <div class="dataDes">
+              <p>The COVID-19 pandemic that spread across the world at the beginning of 2020 was not only a big threat to public health, but also to the entire entertainment industry. In April 2020, during the height of the lockdown, sales of video gaming hardware in the United States increased by 163 percent compared to the previous year.</p>
+            </div>
+
+          </div>
+        </el-col>
+        <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+          <div class="grid-content">
+            <div class="dataViz">
+              <USSpendGrowthChart/>
             </div>
           </div>
         </el-col>
@@ -36,11 +67,16 @@
 
 <script>
 import USRevChart from '@/components/USRevChart.vue';
+import USConsumerSpendChart from '@/components/USConsumerSpendChart.vue';
+import USSpendGrowthChart from '@/components/USSpendGrowthChart.vue';
+
 
 export default {
   name: 'GetRevenue',
   components: {
-    USRevChart
+    USRevChart,
+    USConsumerSpendChart,
+    USSpendGrowthChart
   }
 }
 </script>
