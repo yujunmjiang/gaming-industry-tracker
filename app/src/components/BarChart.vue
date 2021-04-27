@@ -10,15 +10,15 @@
             class="bar-positive"
             :key="item[xKey]"
             :x="xScale(item[xKey])"
-            :width="xScale.bandwidth()" 
+            :width="xScale.bandwidth()"
           ></rect>
         </g>
-        <XAxis 
-          :xScale="xScale" 
+        <XAxis
+          :xScale="xScale"
           :yTranslate="svgHeight"
           :id="id"
         />
-        <YAxis 
+        <YAxis
           :yScale="yScale"
           :xTranslate="0"
           :id="id"
@@ -58,7 +58,7 @@ export default {
     // this.svgWidth = document.getElementById("container").offsetWidth * 0.75;
     this.svgWidth = this.$container.offsetWidth * 0.75;
   },
-  updated(){ 
+  updated(){
     this.AnimateLoad();
     this.redrawToggle = true;
   },

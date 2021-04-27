@@ -5,20 +5,14 @@
     <svg :width="svgWidth + margin.left" :height="svgHeight * 1.5">
       <g :transform="'translate(' + margin.left + ',' + margin.top + ')'">
         <g>
-          <path
-            v-for="item in data"
-            class="line-positive"
-            :key="item[xKey]"
-            :x="xScale(item[xKey])"
-            :width="xScale.bandwidth()" 
-          ></path>
+          <path class='line-positive' :d="line" />
         </g>
-        <XAxis 
-          :xScale="xScale" 
+        <XAxis
+          :xScale="xScale"
           :yTranslate="svgHeight"
           :id="id"
         />
-        <YAxis 
+        <YAxis
           :yScale="yScale"
           :xTranslate="0"
           :id="id"
@@ -50,14 +44,16 @@ export default {
     margin: {top: 10, left: 50, bottom: 10, right: 50 },
     svgWidth: 0,
     redrawToggle: true,
-    $container: null
+    $container: null,
+    line: null
   }),
   mounted(){
-    this.$container = this.$refs.container;
+    this.$container = this.$refs.container
+    window.addEventListener("resize", this.onResize);
+    // this.svgWidth = document.getElementById("container").offsetWidth * 0.75;
     this.svgWidth = this.$container.offsetWidth * 0.75;
-    window.addEventListener("resize", this.onResize)
   },
-  updated(){ 
+  updated(){
     this.AnimateLoad();
     this.redrawToggle = true;
   },
@@ -66,27 +62,40 @@ export default {
   },
   methods: {
     AnimateLoad() {
-      d3.select(this.$container).selectAll('path')
-        .data(this.data)
-        // .attr('data', d3.line())
-        .attr('y', this.yScale(0))
-        .attr('height', 0)
-        .transition()
-        .delay((d, i) => {
-          return i * 150;
-        })
-        .duration(1000)
-        .attr("y", d => {
-          return this.yScale(d[this.yKey]);
-        })
-        .attr("height", d => {
-          return this.svgHeight - this.yScale(d[this.yKey]);
-        });
-        setTimeout(() => 300); // redraw the chart 300ms after the window has been resized
+      // d3.selectAll('rect')
+      const path = d3
+          .line()
+          .x(d => {
+            return this.xScale(d[this.xKey]);
+          })
+          .y(d => {
+            return this.yScale(d[this.yKey]);
+          })
+          .curve(d3.curveCardinal);
+      this.line = path(this.data);
+      // d3.select(this.$container).selectAll('path')
+      //   .data(this.data)
+      //   .attr('stroke-width', 1.5)
+      //   // .attr('d', d3.line())
+      //   .attr('y', this.yScale(0))
+      //   .attr('height', 0)
+      //   .transition()
+      //   .delay((d, i) => {
+      //     return i * 150;
+      //   })
+      //   .duration(1000)
+      //   .attr("y", d => {
+      //     return that.yScale(d[that.yKey]);
+      //   })
+      //   .attr("height", d => {
+      //     return that.svgHeight - that.yScale(d[that.yKey]);
+      //   })
+      //   setTimeout(() => 300); // redraw the chart 300ms after the window has been resized
     },
     onResize() {
+      // this.$svgWidth = document.getElementById("container").offsetWidth * 0.75;
       this.$svgWidth = this.$container.offsetWidth * 0.75;
-      this.$data.redrawToggle = false
+      this.$data.redrawToggle = false;
     }
   },
   computed: {
@@ -126,13 +135,24 @@ export default {
 </script>
 
 <style scoped>
-path.line-positive {
+.line-positive {
   fill: none;
   stroke: #9146ff;
-  stroke-width: 2px;
-  /* transition: r 0.2s ease-in-out; */
+  /* stroke-width: 2px; */
+  transition: r 0.2s ease-in-out;
 }
-
+.line1 {
+  stroke: #9146ff;
+}
+.line2 {
+  stroke: #f92772;
+}
+.line3 {
+  stroke: #00e4c9;
+}
+.line4 {
+  stroke: #cfc468;
+}
 .line-positive:hover {
   filter: brightness(125%)
 }
