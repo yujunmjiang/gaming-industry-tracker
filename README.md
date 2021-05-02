@@ -21,7 +21,7 @@ In this project, the visualizations present how regular production process, tota
 <img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/mockups/mockups.png">
 
 ## Preview
-<img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/preview/preview-00.png">
+<img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/preview/preview.png">
 <img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/preview/preview-01.png">
 <img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/preview/preview-02.png">
 <img src="https://github.com/yujunmjiang/gaming-industry-tracker/blob/main/preview/preview-03.png">
