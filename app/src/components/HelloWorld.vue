@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>HOW COVID-19 HAS CHANGED THE VIDEO GAME INDUSTRY.</p>
-    <h3>By Yujun Jiang</h3>
+    <!-- <h3>By Yujun Jiang</h3> -->
     
   </div>
 </template>
@@ -18,6 +18,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/* @font-face {
+  font-family: 'Press Start 2P', cursive;
+  src: url('/assets/fonts/PressStart2P-Regular.tff') format('truetype');
+} */
+
 h3 {
   font-family: 'Roboto', sans-serif;
   font-size: 1em;

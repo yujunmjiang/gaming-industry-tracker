@@ -11,11 +11,10 @@
             </div>
           </div>
         </el-col>
-          <!-- </el-row>
-        </el-col> -->
+
         <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
           <div class="dataDes">
-            <p>One year ago, <a href="https://www.cdc.gov/">the Centers for Disease Control</a> (CDC) identified the first case of <span class="covid19">COVID-19</span> in the U.S., and the pandemic continues to cause significant risk to the public health and safety of the Nation. On March 13, 2020, President Donald Trump has declared the national emergency by the rapid spread of coronavirus disease. While cinemas and theaters closed their doors to try to stem the spread of the disease, many people turned to home entertainment during periods of self-isolation. The <a href="https://www.npd.com/wps/portal/npd/us/industry-expertise/video-games/">NPD Group</a> reported that video game sales in North America in March 2020 were up 34% from those in March 2019.</p>
+            <p>One year ago, the <a href="https://www.cdc.gov/">Centers for Disease Control</a> (CDC) identified the first case of <span class="covid19">COVID-19</span> in the U.S., and the pandemic continues to cause significant risk to the public health and safety of the Nation. On March 13, 2020, President Trump has declared the national emergency by the rapid spread of coronavirus disease. While cinemas and theaters closed their doors to try to stem the spread of the disease, many people turned to home entertainment during periods of self-isolation. The <a href="https://www.npd.com/wps/portal/npd/us/industry-expertise/video-games/">NPD Group</a> reported that video game sales in North America in March 2020 were up 34% from those in March 2019.</p>
           </div>
         </el-col>
 
@@ -45,7 +44,7 @@
         <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
           <div class="grid-content">
             <div class="dataDes">
-              <p>The COVID-19 pandemic that spread across the world at the beginning of 2020 was not only a big threat to public health, but also to the entire entertainment industry. In April 2020, during the height of the lockdown, sales of video gaming hardware in the United States increased by 163 percent compared to the previous year.</p>
+              <p>The <span class="covid19">COVID-19</span> pandemic that spread across the world at the beginning of 2020 was not only a big threat to public health, but also to the entire entertainment industry. In April 2020, during the height of the lockdown, sales of video gaming hardware in the United States increased by 163 percent compared to the previous year.</p>
             </div>
 
           </div>

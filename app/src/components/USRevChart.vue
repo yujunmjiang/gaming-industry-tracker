@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ChartTitle>Monthly revenue of the U.S. video game industry 2017-2021</ChartTitle>
+    <ChartTitle>Monthly revenue of the U.S. video game industry 2019-2021</ChartTitle>
     <div class="chart-body" ref="container">
       <svg 
         :viewBox="`0 0 ${width} ${height}`"
