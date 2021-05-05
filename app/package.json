@@ -1,18 +1,22 @@
 {
   "name": "app",
   "version": "0.1.0",
+  "description": "MSDV 2021 Thesis Project",
+  "author": "Yujun Jiang",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "d3": "^6.6.2",
+    "dotenv": "^8.2.0",
     "element-plus": "^1.0.2-beta.40",
     "vue": "^3.0.11",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.12",

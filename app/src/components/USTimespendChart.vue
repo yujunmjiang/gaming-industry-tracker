@@ -173,8 +173,8 @@ export default {
 .hoverable:hover {
   filter: brightness(125%);
 }
-::v-deep .axis--x .domain,
-::v-deep .axis--x .tick line {
+::v-deep(.axis--x .domain),
+::v-deep(.axis--x .tick) line {
   display: none;
 }
 </style>
